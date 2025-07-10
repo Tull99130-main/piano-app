@@ -1,0 +1,175 @@
+.piano-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 3rem 0; /* Reduced top margin for piano */
+  user-select: none;
+}
+
+.piano {
+  position: relative;
+  width: 100vw; /* Full screen width */
+  height: 260px;
+  max-width: 1440px;
+}
+
+.white-key {
+  width: 40px;
+  height: 220px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 0 0 10px 10px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: bottom;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.black-key {
+  width: 28px;
+  height: 140px;
+  background: #282828;
+  border-radius: 0 0 8px 8px;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  cursor: pointer;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 96px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 14px;
+  user-select: none;
+  pointer-events: none;
+}
+
+.white-label {
+  color: #222;
+}
+
+.black-label {
+  color: #eee;
+}
+
+.white-key.pressed {
+  background-color: #9BDDE3;
+}
+
+.black-key.pressed {
+  background-color: #FFD296;
+}
+
+.sheet-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.sheet-textarea {
+  height: 180px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 800px;
+  font-size: 20px;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #0ff;
+  background-color: #111;
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff inset;
+  resize: none;
+  scrollbar-width: none;
+}
+
+.sheet-textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.sheet-controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.sheet-button {
+  width: 100px;
+  height: 50px;
+  background: #222;
+  border: 2px solid #0ff;
+  color: #0ff;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.sheet-button:hover {
+  background: #0ff;
+  color: #000;
+}
+
+.bpm-controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-left: 0.5rem;
+}
+
+.bpm-button {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  font-weight: bold;
+  background: #222;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.bpm-button:hover {
+  background: #0ff;
+  color: #000;
+}
+
+.bpm-display {
+  width: 90px;
+  height: 36px;
+  font-size: 16px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #111;
+  color: #0ff;
+  border: 2px solid #0ff;
+  border-radius: 6px;
+}
+
+.highlighted-note {
+  background-color: rgba(255, 255, 0, 0.3); /* soft yellow */
+  transition: background-color 0.2s ease;
+}

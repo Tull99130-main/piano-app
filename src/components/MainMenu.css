@@ -1,0 +1,41 @@
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1f1f, #000000);
+  color: white;
+  text-align: center;
+  padding: 2rem;
+}
+
+.title {
+  font-size: 3.5rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  font-size: 1.25rem;
+  color: #bbb;
+  margin-bottom: 2rem;
+}
+
+.start-btn {
+  background-color: #ffd700;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: black;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.2s ease;
+}
+
+.start-btn:hover {
+  background-color: #ffe042;
+  transform: scale(1.05);
+}
