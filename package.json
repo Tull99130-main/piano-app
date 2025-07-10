@@ -1,6 +1,6 @@
 {
   "name": "piano-app",
-  "homepage": "https://Tull99130-main.github.io/piano-app",
+  "homepage": "https://tull99130-main.github.io/piano-app",
   "description": "A web-based piano app for composing, playing, and exporting music sheets",
   "version": "0.1.0",
   "private": true,
@@ -11,7 +11,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-scripts": "5.0.1",
+    "react-scripts": "^0.0.0",
     "tone": "^15.1.22",
     "web-vitals": "^2.1.4"
   },
@@ -21,7 +21,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-"deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
