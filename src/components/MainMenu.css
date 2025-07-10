@@ -1,0 +1,165 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.main-menu {
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-content {
+  animation: fadeIn 1s ease-out;
+}
+
+.title {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.start-btn, .changelog-btn, .close-btn {
+  padding: 1rem 2rem;
+  margin: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  background: rgba(0, 255, 200, 0.3);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffd5;
+}
+
+.changelog-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+.close-btn {
+  margin-top: 1rem;
+  background: crimson;
+}
+
+.close-btn:hover {
+  background: darkred;
+}
+
+.sheet-textarea-rendered {
+  height: 180px;
+  width: 800px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-size: 20px;
+  font-family: monospace;
+  padding: 10px;
+  border-radius: 8px;
+  border: 2px solid #0ff;
+  background-color: #111;
+  color: #0ff;
+  box-shadow: 0 0 10px #0ff inset;
+  white-space: pre-wrap;
+  word-break: break-word;
+  outline: none;
+  scrollbar-width: none;
+}
+
+.sheet-textarea-rendered::-webkit-scrollbar {
+  display: none;
+}
+
+.played-char {
+  color: #0f0; /* Green for played */
+}
+
+.highlighted-char {
+  color: #ff0; /* Yellow for next */
+}
+
+
+.changelog-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(10, 10, 10, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.changelog-modal {
+  background: #222;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 600px;
+  text-align: left;
+  color: white;
+  overflow-y: auto;
+  max-height: 80vh;
+  animation: slideUp 0.5s ease-out;
+}
+
+.changelog-modal h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #00ffc8;
+}
+
+.changelog-modal ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.changelog-modal li {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.app-version {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #888;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 4px 8px;
+  border-radius: 8px;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  z-index: 9999;
+}
